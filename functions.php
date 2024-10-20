@@ -33,13 +33,27 @@ function remove_custom_css_section( $wp_customize ) {
 add_action( 'customize_register', 'remove_custom_css_section', 15 );
 
 
-// CUSTOM BLOCKS
+// CUSTOM FOOTER BLOCK
 function kpi_custom_footer() {
     ?>
     <footer class="site-footer">
-        <div class="custom-footer-text">
-            <p>© КПІ ім. І. Сікорського, <?php echo get_bloginfo('name'); ?> | Всі права захищено</p>
-        </div>
+         <div class="custom-footer-text">
+             <!-- Logo KPI -->
+             <a href="https://kpi.ua" target="_blank">
+                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/brandbook-symbols/main-building/kpi_main_building_white.png" alt="Головний корпус КПІ" style="width: 40%;">
+             </a>
+             <br><br>
+             <!-- Copyright with dynamic name -->
+             <p>
+                 <a href="<?php echo home_url(); ?>" class="footer-link">
+                     Copyright <?php echo date('Y'); ?> © КПІ ім. І. Сікорського, <?php echo get_bloginfo('name'); ?>. Всі Права Захищено
+                 </a>
+             </p>
+             <!-- KBIS link -->
+             <p>
+                 <a href="https://kbis.kpi.ua/" class="footer-link">Розроблено КБІС</a>
+             </p>
+         </div>
     </footer>
-    <?php
+<?php
 }
