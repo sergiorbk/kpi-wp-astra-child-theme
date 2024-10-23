@@ -63,7 +63,7 @@ function remove_custom_css_section( $wp_customize ) {
 add_action( 'customize_register', 'remove_custom_css_section', 15 );
 
 
-// Sets a single color palette according to the brand book
+// Sets a single color palette according to the brand book (db table "astra-color-palettes")
 function update_astra_color_palettes() {
     $new_palette = array(
         'currentPalette' => 'palette_1',
@@ -74,10 +74,14 @@ function update_astra_color_palettes() {
                 '#1062a3',
                 '#0d5690',
                 '#004f7f',
-                '#ffffff',
                 '#f07d00',
                 '#ec6605',
                 '#7f0d38',
+                '#620c33',
+                '#ffffff',
+                '#bbbbbb',
+                '#958f93',
+                '#000000',
             ),
         ),
         'presets' => array(),
@@ -86,7 +90,6 @@ function update_astra_color_palettes() {
     update_option('astra-color-palettes', $new_palette);
 }
 add_action('init', 'update_astra_color_palettes');
-
 
 
 // ASTRA THEME settings END ==================================================

@@ -11,26 +11,26 @@ Template: astra
 */
 
 /* FOOTER styles BEGIN */
-.site-footer {
-    background-color: #1c396e;
-    padding: 20px;
-    text-align: center;
-}
+/*.site-footer {*/
+/*    background-color: #1c396e;*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*}*/
 
-.custom-footer-text {
-    color: white;
-}
+/*.custom-footer-text {*/
+/*    color: white;*/
+/*}*/
 
-.custom-footer-text img {
-    max-width: 100%; /* To make logo adaptive */
-}
+/*.custom-footer-text img {*/
+/*    max-width: 100%; !* To make logo adaptive *!*/
+/*}*/
 
-.footer-link {
-    color: white; /* While links color */
-    text-decoration: none; /* Disable links underline */
-}
+/*.footer-link {*/
+/*    color: white; !* While links color *!*/
+/*    text-decoration: none; !* Disable links underline *!*/
+/*}*/
 
-.footer-link:hover {
-    color: #bbbbbb;
-}
+/*.footer-link:hover {*/
+/*    color: #bbbbbb;*/
+/*}*/
 /* FOOTER styles END */
