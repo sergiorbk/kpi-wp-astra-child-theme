@@ -17,9 +17,7 @@ define( 'CHILD_THEME_ASTRA_CHILD_VERSION', '1.0.0' );
  * Enqueue styles
  */
 function child_enqueue_styles() {
-
 	wp_enqueue_style( 'astra-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ASTRA_CHILD_VERSION, 'all' );
-
 }
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 // Do not remove the code above!!!
@@ -91,5 +89,29 @@ function update_astra_color_palettes() {
 }
 add_action('init', 'update_astra_color_palettes');
 
+
+// Sets Exo 2 as the main font family
+function set_custom_astra_typography_defaults() {
+    // get current settings from bd
+    $astra_settings = get_option('astra-settings', array());
+
+    // define needed values for fonts
+    $custom_typography_settings = array(
+        'body-font-family'       => "'Exo 2', sans-serif",
+        'headings-font-family'   => "'Exo 2', sans-serif",
+        'font-family-h1'         => "'Exo 2', sans-serif",
+        'font-family-h2'         => "'Exo 2', sans-serif",
+        'font-family-h4'         => "'Exo 2', sans-serif",
+        'font-family-h5'         => "'Exo 2', sans-serif",
+        'font-family-h6'         => "'Exo 2', sans-serif",
+    );
+
+    // merge current settings with customized
+    $astra_settings = array_merge($astra_settings, $custom_typography_settings);
+
+    // save the updates to db
+    update_option('astra-settings', $astra_settings);
+}
+add_action('init', 'set_custom_astra_typography_defaults');
 
 // ASTRA THEME settings END ==================================================
