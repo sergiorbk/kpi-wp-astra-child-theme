@@ -11,26 +11,73 @@ Template: astra
 */
 
 /* FOOTER styles BEGIN */
-/*.site-footer {*/
-/*    background-color: #1c396e;*/
-/*    padding: 20px;*/
-/*    text-align: center;*/
-/*}*/
+/* FOOTER styles BEGIN */
+.custom-site-footer {
+    background-color: #1c396e;
+    padding: 20px;
+    color: white;
+}
 
-/*.custom-footer-text {*/
-/*    color: white;*/
-/*}*/
+.custom-footer-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center; /* Center content vertically */
+    gap: 10px; /* Space between columns */
+}
 
-/*.custom-footer-text img {*/
-/*    max-width: 100%; !* To make logo adaptive *!*/
-/*}*/
+.custom-footer-left {
+    text-align: left; /* Align left section to the left */
+}
 
-/*.footer-link {*/
-/*    color: white; !* While links color *!*/
-/*    text-decoration: none; !* Disable links underline *!*/
-/*}*/
+.custom-footer-middle {
+    text-align: center; /* Center middle section */
+}
 
-/*.footer-link:hover {*/
-/*    color: #bbbbbb;*/
-/*}*/
+.custom-footer-right {
+    text-align: right; /* Align right section to the right */
+}
+
+.custom-footer-right p {
+    margin: 5px 0; /* Add spacing between contact lines */
+}
+
+.custom-footer-text img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #bbbbbb;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    .custom-footer-container {
+        grid-template-columns: 1fr; /* Switch to single column on small screens */
+        text-align: center;
+    }
+
+    .custom-footer-left,
+    .custom-footer-middle {
+        text-align: center;
+    }
+
+    .custom-footer-right {
+        text-align: left;
+    }
+}
 /* FOOTER styles END */
+
+/* FOOTER styles END */
+
+
+
+/* HEADER styles BEGIN */
+
+/* HEADER styles END */

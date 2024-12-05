@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	astra_content_after();
 	astra_footer_before();
 	astra_footer();
-//  kpi_custom_footer();
+ 	kpi_custom_footer(); // custom KPI footer
 	astra_footer_after();
 ?>
 
