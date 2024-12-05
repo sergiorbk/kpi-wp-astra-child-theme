@@ -75,6 +75,64 @@ function kpi_custom_footer() {
 }
 
 
+// Custom Header Function
+// CUSTOM HEADER BLOCK
+function kpi_custom_header() {
+    ?>
+    <header class="custom-site-header">
+        <div class="custom-header-container">
+            <!-- Left Section: Two logos in one row -->
+            <div class="custom-header-left">
+                <!-- User-configured logo -->
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="user-logo-link">
+                    <?php 
+                    $site_logo = get_theme_mod('custom_logo');
+                    $site_logo_url = $site_logo ? wp_get_attachment_image_url($site_logo, 'full') : '';
+
+                    if ($site_logo_url) {
+                        echo '<img src="' . esc_url($site_logo_url) . '" alt="' . esc_attr(get_bloginfo('name')) . '" class="site-logo">';
+                    } else {
+                        echo '<span class="site-title">' . esc_html(get_bloginfo('name')) . '</span>';
+                    }
+                    ?>
+                </a>
+
+                <!-- Hardcoded logo -->
+                <a href="https://kpi.ua" target="_blank" class="hardcoded-logo-link">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/brandbook-symbols/small-emblem/blue_small_emblem.png" 
+                         alt="Hardcoded Logo" 
+                         class="hardcoded-logo-image">
+                </a>
+            </div>
+
+            <!-- Right Section: Site title and menu -->
+            <div class="custom-header-right">
+                <div class="header-title-menu">
+                    <!-- Site Title -->
+                    <h1 class="site-title">
+                        <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a>
+                    </h1>
+
+                    <!-- Dynamic menu -->
+                    <nav class="primary-navigation">
+                        <?php
+                        if (has_nav_menu('primary')) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary',
+                                'container' => false,
+                                'menu_class' => 'primary-menu',
+                            ));
+                        } else {
+                            echo '<p class="no-menu-message">Please assign a menu to the primary location in the Customizer.</p>';
+                        }
+                        ?>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <?php
+}
 
 // ASTRA THEME settings BEGIN ==================================================
 

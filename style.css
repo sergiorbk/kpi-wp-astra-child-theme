@@ -74,10 +74,83 @@ Template: astra
 }
 /* FOOTER styles END */
 
-/* FOOTER styles END */
 
 
+/* Custom Header Styling */
+.custom-site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
 
-/* HEADER styles BEGIN */
+.custom-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left section: Logos */
+.custom-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between the logos */
+}
+
+.site-logo,
+.hardcoded-logo-image {
+    max-height: 90px;
+    width: auto;
+}
+
+/* Right section: Title and Menu */
+.custom-header-right {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between the site title and the menu */
+    flex-grow: 1; /* Allow this section to take up remaining space */
+}
+
+/* Site title right after logos */
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Menu positioned after the title */
+.primary-navigation {
+    margin-left: auto; /* Push the menu to the far right */
+}
+
+.primary-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    gap: 15px; /* Space between menu items */
+}
+
+.primary-menu li {
+    display: inline;
+}
+
+.primary-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.primary-menu a:hover {
+    color: #0073aa;
+}
 
 /* HEADER styles END */
