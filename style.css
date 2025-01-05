@@ -9,3 +9,148 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+
+/* FOOTER styles BEGIN */
+/* FOOTER styles BEGIN */
+.custom-site-footer {
+    background-color: #1c396e;
+    padding: 20px;
+    color: white;
+}
+
+.custom-footer-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center; /* Center content vertically */
+    gap: 10px; /* Space between columns */
+}
+
+.custom-footer-left {
+    text-align: left; /* Align left section to the left */
+}
+
+.custom-footer-middle {
+    text-align: center; /* Center middle section */
+}
+
+.custom-footer-right {
+    text-align: right; /* Align right section to the right */
+}
+
+.custom-footer-right p {
+    margin: 5px 0; /* Add spacing between contact lines */
+}
+
+.custom-footer-text img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #bbbbbb;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    .custom-footer-container {
+        grid-template-columns: 1fr; /* Switch to single column on small screens */
+        text-align: center;
+    }
+
+    .custom-footer-left,
+    .custom-footer-middle {
+        text-align: center;
+    }
+
+    .custom-footer-right {
+        text-align: left;
+    }
+}
+/* FOOTER styles END */
+
+
+
+/* Custom Header Styling */
+.custom-site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.custom-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left section: Logos */
+.custom-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between the logos */
+}
+
+.site-logo,
+.hardcoded-logo-image {
+    max-height: 90px;
+    width: auto;
+}
+
+/* Right section: Title and Menu */
+.custom-header-right {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between the site title and the menu */
+    flex-grow: 1; /* Allow this section to take up remaining space */
+}
+
+/* Site title right after logos */
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Menu positioned after the title */
+.primary-navigation {
+    margin-left: auto; /* Push the menu to the far right */
+}
+
+.primary-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    gap: 15px; /* Space between menu items */
+}
+
+.primary-menu li {
+    display: inline;
+}
+
+.primary-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.primary-menu a:hover {
+    color: #0073aa;
+}
+
+/* HEADER styles END */
